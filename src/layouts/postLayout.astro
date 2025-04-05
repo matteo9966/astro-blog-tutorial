@@ -1,0 +1,17 @@
+---
+const { frontmatter } = Astro.props;
+---
+<meta charset="utf-8" />
+<style>
+ .blog-container{
+    max-width:1000px;
+    margin:auto;
+    padding:15px;
+    background-color:rgb(182, 180, 180);
+ }
+</style>
+<h1>{frontmatter.title}</h1>
+<p>Written by {frontmatter.author}</p>
+<div class="blog-container">
+    <slot />
+</div>

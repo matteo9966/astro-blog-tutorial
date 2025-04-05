@@ -1,0 +1,15 @@
+---
+const {title,link} = Astro.props
+---
+<style>
+  .social{
+     padding:10px;
+     border:1px solid gray;
+     border-radius:9px;
+
+  }
+</style>
+
+<div class="social">
+    {title} - <a href={link}>Vist</a>
+</div>

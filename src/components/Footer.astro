@@ -1,0 +1,17 @@
+---
+import Social from "./Social.astro"
+---
+<footer>
+    <style>
+        .container{
+            display:flex;
+            gap:10px;
+        }
+    </style>
+    This is the footer
+    <div class="container">
+        <Social title="Twitter" link="#"></Social>
+        <Social title="Facebook" link="#"></Social>
+    </div>
+    <div>Astro version {Astro.generator}</div>
+</footer>

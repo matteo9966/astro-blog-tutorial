@@ -1,5 +1,7 @@
 ---
-
+import Navigation from "../components/Navigation.astro"
+import '../styles/global.css';
+const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true }));
 ---
 
 <html lang="en">
@@ -11,6 +13,16 @@
 		<title>Astro</title>
 	</head>
 	<body>
+<Navigation/>
+
 		<h1>Astro</h1>
+		<p>This is my first astro page:!</p>
+       <div>
+		<h3>This blog contains {allPosts.length} posts</h3>
+		<pre>
+
+			{allPosts.map(p=>(JSON.stringify(p,null,2)))}
+		</pre>
+	   </div>
 	</body>
 </html>
